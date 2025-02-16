@@ -1,0 +1,21 @@
+config("glad_inner_headers") {
+    include_dirs = [
+        "include",
+    ]
+}
+
+static_library("glad") {
+    sources = [
+        "src/glad.c",
+    ]
+    include_dirs = [
+        "include",
+    ]
+    public = [
+        "include/glad/glad.h",
+        "include/KHR/khrplatform.h"
+    ]
+    public_configs = [
+        ":glad_inner_headers",
+    ]
+}

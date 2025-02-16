@@ -1,0 +1,11 @@
+executable("app") {
+    sources = [
+        "src/main.cpp",
+    ]
+    deps = [
+        "//thirdparty/glad:glad",
+        "//thirdparty/glfw:glfw"
+    ]
+}
+
+
